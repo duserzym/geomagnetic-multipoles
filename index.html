@@ -2225,9 +2225,9 @@ html&gt;body{padding:0}&lt;/style&gt;
     }
     probeGroup.visible=state.display!==&#x27;lobes&#x27;;
     $(&#x27;gm-gad-key&#x27;).hidden=state.display===&#x27;lobes&#x27;;
-    $(&#x27;gm-scene-note&#x27;).textContent=state.display===&#x27;lobes&#x27;?&#x27;Glyph radius: normalized |Bᵣ| · reference grid: R&#x27;:state.display===&#x27;arrows&#x27;?&#x27;Vectors at r = R · lengths scaled&#x27;:&#x27;Exterior · r ≤ 2.2 R&#x27;;
-    if(state.view===&#x27;meridian&#x27;)$(&#x27;gm-scene-note&#x27;).textContent=&#x27;Projected 3D traces onto &#x27;+lonLabel(state.longitude)+&#x27; meridian; paths may leave plane&#x27;;
-    else if(state.view===&#x27;equator&#x27;)$(&#x27;gm-scene-note&#x27;).textContent=&#x27;Projection onto equatorial plane; viewing from geographic north&#x27;;
+    const displayNote=state.display===&#x27;lobes&#x27;?&#x27;Glyph radius: normalized |Bᵣ| · reference grid: R&#x27;:state.display===&#x27;arrows&#x27;?&#x27;Vectors at r = R · lengths scaled&#x27;:&#x27;Exterior · r ≤ 2.2 R&#x27;;
+    const projectionNote=state.view===&#x27;meridian&#x27;?&#x27;Camera projection onto &#x27;+lonLabel(state.longitude)+&#x27; meridian&#x27;+([&#x27;lines&#x27;,&#x27;both&#x27;].includes(state.display)?&#x27;; 3D traces may leave plane&#x27;:&#x27;&#x27;):state.view===&#x27;equator&#x27;?&#x27;Projection onto equatorial plane; viewing from geographic north&#x27;:&#x27;&#x27;;
+    $(&#x27;gm-scene-note&#x27;).textContent=displayNote+(projectionNote?&#x27; · &#x27;+projectionNote:&#x27;&#x27;);
     updateColorLegend();
   }
   function rebuildField() {

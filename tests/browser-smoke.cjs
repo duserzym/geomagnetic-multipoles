@@ -47,9 +47,19 @@ fs.mkdirSync(output,{recursive:true});
     assert.equal(await f.locator('#gm-example').inputValue(),'custom');
     for(const view of ['meridian','equator','3d']) {
       await f.locator('#gm-view').selectOption(view);
-      if(view==='meridian')assert.match(await value('gm-scene-note'),/Projected 3D traces.*45° E/);
+      if(view==='meridian')assert.match(await value('gm-scene-note'),/Camera projection onto 45° E meridian/);
       if(view==='equator')assert.match(await value('gm-scene-note'),/geographic north/);
-      for(const display of ['arrows','both','lobes','lines'])await f.locator('#gm-display').selectOption(display);
+      for(const display of ['arrows','both','lobes','lines']) {
+        await f.locator('#gm-display').selectOption(display);
+        const note=await value('gm-scene-note');
+        if(display==='lobes')assert.match(note,/Glyph radius: normalized \|Bᵣ\|/);
+        if(display==='arrows')assert.match(note,/Vectors at r = R/);
+        if(view==='meridian') {
+          assert.match(note,/Camera projection onto 45° E meridian/);
+          if(['lines','both'].includes(display))assert.match(note,/3D traces may leave plane/);
+          else assert.doesNotMatch(note,/traces/);
+        }
+      }
     }
     for(const color of ['inclination','strength','radial','polarity','neutral'])await f.locator('#gm-color').selectOption(color);
     await f.locator('#gm-color').selectOption('inclination');

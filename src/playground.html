@@ -433,9 +433,9 @@
     }
     probeGroup.visible=state.display!=='lobes';
     $('gm-gad-key').hidden=state.display==='lobes';
-    $('gm-scene-note').textContent=state.display==='lobes'?'Glyph radius: normalized |Bᵣ| · reference grid: R':state.display==='arrows'?'Vectors at r = R · lengths scaled':'Exterior · r ≤ 2.2 R';
-    if(state.view==='meridian')$('gm-scene-note').textContent='Projected 3D traces onto '+lonLabel(state.longitude)+' meridian; paths may leave plane';
-    else if(state.view==='equator')$('gm-scene-note').textContent='Projection onto equatorial plane; viewing from geographic north';
+    const displayNote=state.display==='lobes'?'Glyph radius: normalized |Bᵣ| · reference grid: R':state.display==='arrows'?'Vectors at r = R · lengths scaled':'Exterior · r ≤ 2.2 R';
+    const projectionNote=state.view==='meridian'?'Camera projection onto '+lonLabel(state.longitude)+' meridian'+(['lines','both'].includes(state.display)?'; 3D traces may leave plane':''):state.view==='equator'?'Projection onto equatorial plane; viewing from geographic north':'';
+    $('gm-scene-note').textContent=displayNote+(projectionNote?' · '+projectionNote:'');
     updateColorLegend();
   }
   function rebuildField() {
