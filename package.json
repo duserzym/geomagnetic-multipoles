@@ -1,0 +1,11 @@
+{
+  "name": "geomagnetic-multipoles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive axial geomagnetic multipole and inclination-shallowing playground",
+  "scripts": {
+    "build": "python3 tools/scripts/render.py src/playground.html index.html --force --title \"Geomagnetic Multipoles — Inclination Playground\"",
+    "test": "node --test tests/*.test.cjs",
+    "preview": "python3 -m http.server 8000 --bind 127.0.0.1"
+  }
+}
