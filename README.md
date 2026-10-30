@@ -20,6 +20,20 @@ The lobe glyph encodes the radial field sampled on a unit reference sphere. Its 
 
 Each degree retains an axisymmetric shape about its own axis. Rotating it generally introduces nonzero orders in geographic coordinates, but does not span all degree-2 or degree-3 fields. A general quadrupole has five coefficients (and two multipole axes); a general octupole has seven coefficients. These additional shape parameters are outside this playground.
 
+## Visual tour
+
+![The viewer's dipole, quadrupole and octupole control cards, each with its own amplitude, tilt and axis-azimuth sliders, plus reset to axial.](docs/figures/orientation-controls.png)
+
+**Independent component orientations.** Each axisymmetric component has its own amplitude, tilt and azimuth. This example uses D = 1.00, Q = +0.23 and O = +0.17, with tilts of 25°, 75° and 140°. Resetting the axes preserves the amplitudes.
+
+![Pure axial octupole field lines and radial-polarity colors in the selected-meridian camera view, showing upper, equatorial and lower loop regions on both sides of the geographic axis.](docs/figures/octupole-meridian.png)
+
+**Field geometry in a meridian view.** The pure axial octupole (D = Q = 0, O = +0.50) has three field-line cells on each side of its symmetry axis: six loop regions in the full profile. Blue marks inward radial field and red marks outward radial field. The camera projects actual 3D traces; the axial case shown is planar, while tilted mixtures generally leave the selected meridian. Line density is illustrative.
+
+![A tilted mixture's 3D field and component axes beside the north/east head-to-tail vector sum at 35 degrees north, 45 degrees east; below are latitude and longitude controls and the inclination transect at 45 degrees east.](docs/figures/longitude-probe.png)
+
+**A longitude-aware local probe.** With the orientations above, the probe at 35°N, 45°E gives inclination +61.0° and declination −35.3°. The arrows show the north/east projection of component addition; inclination uses the full horizontal magnitude, including east. The chart is a latitude slice at the selected longitude. The displayed apparent GAD latitude is an assumption-dependent proxy, not a geographic latitude estimate.
+
 ## Run and edit
 
 No npm packages need to be installed. Building uses Python 3; the scientific tests use Node.js 18 or newer.
