@@ -1791,18 +1791,32 @@ html&gt;body{padding:0}&lt;/style&gt;
 })();
 &lt;/script&gt;
 &lt;div id=&quot;geomag-lab&quot;&gt;
-  &lt;h2&gt;Axial multipoles &amp;amp; inclination&lt;/h2&gt;
-  &lt;div class=&quot;text-small text-muted gm-subtitle&quot;&gt;Idealized axial field · m = 0 · surface observations · normal dipole reference&lt;/div&gt;
+  &lt;h2&gt;Multipole orientation &amp;amp; inclination&lt;/h2&gt;
+  &lt;div class=&quot;text-small text-muted gm-subtitle&quot;&gt;Independently rotated axisymmetric components · surface observations · fixed dipole reference&lt;/div&gt;
   &lt;div class=&quot;gm-weights&quot;&gt;
-    &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;&lt;i class=&quot;gm-dot gm-d&quot;&gt;&lt;/i&gt;Dipole D&lt;/span&gt;&lt;output id=&quot;gm-d-value&quot; class=&quot;tabular-nums&quot;&gt;1.00&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-d&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;1.5&quot; step=&quot;0.01&quot; value=&quot;1&quot; aria-label=&quot;Dipole weight&quot;&gt;&lt;/label&gt;
-    &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;&lt;i class=&quot;gm-dot gm-q&quot;&gt;&lt;/i&gt;Quadrupole Q&lt;/span&gt;&lt;output id=&quot;gm-q-value&quot; class=&quot;tabular-nums&quot;&gt;0.00&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-q&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-0.5&quot; max=&quot;0.5&quot; step=&quot;0.01&quot; value=&quot;0&quot; aria-label=&quot;Quadrupole weight&quot;&gt;&lt;/label&gt;
-    &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;&lt;i class=&quot;gm-dot gm-o&quot;&gt;&lt;/i&gt;Octupole O&lt;/span&gt;&lt;output id=&quot;gm-o-value&quot; class=&quot;tabular-nums&quot;&gt;+0.15&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-o&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-0.5&quot; max=&quot;0.5&quot; step=&quot;0.01&quot; value=&quot;0.15&quot; aria-label=&quot;Octupole weight&quot;&gt;&lt;/label&gt;
+    &lt;fieldset class=&quot;gm-component&quot;&gt;&lt;legend&gt;&lt;i class=&quot;gm-dot gm-d&quot;&gt;&lt;/i&gt;Dipole D&lt;/legend&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Amplitude&lt;/span&gt;&lt;output id=&quot;gm-d-value&quot; class=&quot;tabular-nums&quot;&gt;&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-d&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;1.5&quot; step=&quot;0.01&quot; value=&quot;1&quot; aria-label=&quot;Dipole weight&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Tilt from geographic north&lt;/span&gt;&lt;output id=&quot;gm-d-tilt-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-d-tilt&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Dipole tilt&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Axis azimuth · east of 0°&lt;/span&gt;&lt;output id=&quot;gm-d-azimuth-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-d-azimuth&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Dipole axis azimuth&quot;&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset class=&quot;gm-component&quot;&gt;&lt;legend&gt;&lt;i class=&quot;gm-dot gm-q&quot;&gt;&lt;/i&gt;Quadrupole Q&lt;/legend&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Amplitude&lt;/span&gt;&lt;output id=&quot;gm-q-value&quot; class=&quot;tabular-nums&quot;&gt;&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-q&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-0.5&quot; max=&quot;0.5&quot; step=&quot;0.01&quot; value=&quot;0&quot; aria-label=&quot;Quadrupole weight&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Tilt from geographic north&lt;/span&gt;&lt;output id=&quot;gm-q-tilt-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-q-tilt&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Quadrupole tilt&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Axis azimuth · east of 0°&lt;/span&gt;&lt;output id=&quot;gm-q-azimuth-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-q-azimuth&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Quadrupole axis azimuth&quot;&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset class=&quot;gm-component&quot;&gt;&lt;legend&gt;&lt;i class=&quot;gm-dot gm-o&quot;&gt;&lt;/i&gt;Octupole O&lt;/legend&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Amplitude&lt;/span&gt;&lt;output id=&quot;gm-o-value&quot; class=&quot;tabular-nums&quot;&gt;&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-o&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-0.5&quot; max=&quot;0.5&quot; step=&quot;0.01&quot; value=&quot;0.15&quot; aria-label=&quot;Octupole weight&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Tilt from geographic north&lt;/span&gt;&lt;output id=&quot;gm-o-tilt-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-o-tilt&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Octupole tilt&quot;&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Axis azimuth · east of 0°&lt;/span&gt;&lt;output id=&quot;gm-o-azimuth-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-o-azimuth&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Octupole axis azimuth&quot;&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;
   &lt;/div&gt;
+  &lt;div class=&quot;gm-orientation-note text-small text-muted&quot;&gt;Tilt 0° is axial. Azimuth sets the tilt direction and has no effect at tilt 0° or 180°. Each component keeps its axisymmetric shape.&lt;/div&gt;
+  &lt;button id=&quot;gm-reset-axes&quot; class=&quot;form-button&quot; type=&quot;button&quot;&gt;Reset axes to axial&lt;/button&gt;
   &lt;div class=&quot;viz-controls gm-controls&quot;&gt;
     &lt;label class=&quot;form-label&quot;&gt;Example&lt;select id=&quot;gm-example&quot; class=&quot;form-select&quot; aria-label=&quot;Multipole example&quot;&gt;
       &lt;option value=&quot;shallow&quot;&gt;Dipole + 15% octupole&lt;/option&gt;&lt;option value=&quot;gad&quot;&gt;Dipole only (GAD)&lt;/option&gt;&lt;option value=&quot;steep&quot;&gt;Dipole − 15% octupole&lt;/option&gt;&lt;option value=&quot;quadrupole&quot;&gt;Dipole + 10% quadrupole&lt;/option&gt;&lt;option value=&quot;pureq&quot;&gt;Axial quadrupole only&lt;/option&gt;&lt;option value=&quot;pureo&quot;&gt;Axial octupole only&lt;/option&gt;&lt;option value=&quot;custom&quot;&gt;Custom&lt;/option&gt;
     &lt;/select&gt;&lt;/label&gt;
-    &lt;label class=&quot;form-label&quot;&gt;Camera&lt;select id=&quot;gm-view&quot; class=&quot;form-select&quot; aria-label=&quot;Three dimensional camera view&quot;&gt;&lt;option value=&quot;3d&quot;&gt;3D · drag to orbit&lt;/option&gt;&lt;option value=&quot;meridian&quot;&gt;Meridional profile&lt;/option&gt;&lt;option value=&quot;equator&quot;&gt;Equatorial view&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Camera&lt;select id=&quot;gm-view&quot; class=&quot;form-select&quot; aria-label=&quot;Three dimensional camera view&quot;&gt;&lt;option value=&quot;3d&quot;&gt;3D · drag to orbit&lt;/option&gt;&lt;option value=&quot;meridian&quot;&gt;Selected-meridian projection&lt;/option&gt;&lt;option value=&quot;equator&quot;&gt;Equatorial-plane projection&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
     &lt;span id=&quot;gm-ratios&quot; class=&quot;text-small tabular-nums&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
   &lt;div class=&quot;viz-controls gm-appearance&quot;&gt;
@@ -1813,49 +1827,64 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;div id=&quot;gm-color-legend&quot; class=&quot;gm-color-legend text-small&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;gm-main&quot;&gt;
     &lt;div&gt;
-      &lt;div class=&quot;gm-stage&quot; id=&quot;gm-stage&quot; role=&quot;img&quot; aria-label=&quot;Interactive three dimensional exterior magnetic field. All three axial multipoles occupy meridional planes around the rotation axis. The equatorial plane is horizontal.&quot;&gt;
-        &lt;div class=&quot;gm-canvas-label&quot; id=&quot;gm-north&quot;&gt;N · symmetry axis&lt;/div&gt;&lt;div class=&quot;gm-canvas-label&quot; id=&quot;gm-equator&quot;&gt;Equator&lt;/div&gt;&lt;div class=&quot;gm-canvas-label gm-probe-label&quot; id=&quot;gm-probe-label&quot;&gt;Probe&lt;/div&gt;
+      &lt;div class=&quot;gm-stage&quot; id=&quot;gm-stage&quot; role=&quot;img&quot; aria-label=&quot;Interactive exterior magnetic field with independently oriented dipole, quadrupole and octupole axes. Lines are traced in three dimensions; fixed camera views are projections.&quot;&gt;
+        &lt;div class=&quot;gm-canvas-label&quot; id=&quot;gm-north&quot;&gt;Geographic N&lt;/div&gt;&lt;div class=&quot;gm-canvas-label&quot; id=&quot;gm-equator&quot;&gt;Equator&lt;/div&gt;&lt;div class=&quot;gm-canvas-label gm-probe-label&quot; id=&quot;gm-probe-label&quot;&gt;Probe&lt;/div&gt;
+        &lt;div class=&quot;gm-canvas-label gm-axis-label gm-d&quot; id=&quot;gm-d-axis&quot;&gt;D axis&lt;/div&gt;&lt;div class=&quot;gm-canvas-label gm-axis-label gm-q&quot; id=&quot;gm-q-axis&quot;&gt;Q axis&lt;/div&gt;&lt;div class=&quot;gm-canvas-label gm-axis-label gm-o&quot; id=&quot;gm-o-axis&quot;&gt;O axis&lt;/div&gt;
         &lt;div id=&quot;gm-webgl-error&quot; class=&quot;text-small text-destructive&quot; role=&quot;alert&quot; hidden&gt;&lt;/div&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;gm-scene-legend text-small&quot;&gt;&lt;span&gt;&lt;i class=&quot;gm-dot gm-total&quot;&gt;&lt;/i&gt;&lt;span id=&quot;gm-field-name&quot;&gt;Axial field sum&lt;/span&gt;&lt;/span&gt;&lt;span id=&quot;gm-gad-key&quot;&gt;&lt;i class=&quot;gm-line gm-d gm-dashed&quot;&gt;&lt;/i&gt; GAD at probe&lt;/span&gt;&lt;span id=&quot;gm-scene-note&quot; class=&quot;text-muted&quot;&gt;Exterior · r ≤ 2.2 R&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;gm-scene-legend text-small&quot;&gt;&lt;span&gt;&lt;i class=&quot;gm-dot gm-total&quot;&gt;&lt;/i&gt;&lt;span id=&quot;gm-field-name&quot;&gt;Field sum&lt;/span&gt;&lt;/span&gt;&lt;span id=&quot;gm-gad-key&quot;&gt;&lt;i class=&quot;gm-line gm-d gm-dashed&quot;&gt;&lt;/i&gt; GAD at probe&lt;/span&gt;&lt;span id=&quot;gm-scene-note&quot; class=&quot;text-muted&quot;&gt;Exterior · r ≤ 2.2 R&lt;/span&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;gm-observer&quot;&gt;
       &lt;h3&gt;Local vector addition&lt;/h3&gt;
       &lt;div class=&quot;text-small text-muted&quot; id=&quot;gm-local-title&quot;&gt;Probe at 30° N · relative field units&lt;/div&gt;
-      &lt;svg id=&quot;gm-vector&quot; role=&quot;img&quot; aria-label=&quot;North and down components of the dipole, quadrupole, octupole and their vector sum&quot;&gt;&lt;/svg&gt;
+      &lt;div class=&quot;viz-controls gm-vector-controls&quot;&gt;&lt;label class=&quot;form-label&quot;&gt;Vector projection&lt;select id=&quot;gm-vector-plane&quot; class=&quot;form-select&quot; aria-label=&quot;Local vector projection&quot;&gt;&lt;option value=&quot;nd&quot;&gt;North / down&lt;/option&gt;&lt;option value=&quot;ne&quot;&gt;North / east&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;/div&gt;
+      &lt;svg id=&quot;gm-vector&quot; role=&quot;img&quot; aria-label=&quot;Projected component vectors added head to tail; full north, east and down values appear below&quot;&gt;&lt;/svg&gt;
       &lt;div class=&quot;gm-numbers tabular-nums&quot;&gt;
         &lt;span&gt;Combined inclination&lt;/span&gt;&lt;strong id=&quot;gm-i&quot;&gt;&lt;/strong&gt;
-        &lt;span&gt;Dipole prediction&lt;/span&gt;&lt;span id=&quot;gm-gad-i&quot;&gt;&lt;/span&gt;
+        &lt;span&gt;Declination · east of north&lt;/span&gt;&lt;span id=&quot;gm-declination&quot;&gt;&lt;/span&gt;
+        &lt;span&gt;North / east / down&lt;/span&gt;&lt;span id=&quot;gm-ned&quot;&gt;&lt;/span&gt;
+        &lt;span&gt;GAD prediction&lt;/span&gt;&lt;span id=&quot;gm-gad-i&quot;&gt;&lt;/span&gt;
         &lt;span&gt;Change in |inclination|&lt;/span&gt;&lt;span id=&quot;gm-delta&quot;&gt;&lt;/span&gt;
-        &lt;span&gt;Latitude inferred as GAD&lt;/span&gt;&lt;span id=&quot;gm-inferred&quot;&gt;&lt;/span&gt;
+        &lt;span&gt;Apparent GAD latitude · proxy&lt;/span&gt;&lt;span id=&quot;gm-inferred&quot;&gt;&lt;/span&gt;
       &lt;/div&gt;
       &lt;div id=&quot;gm-detail&quot; class=&quot;text-small&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;label class=&quot;form-label gm-latitude&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Probe latitude λ&lt;/span&gt;&lt;output id=&quot;gm-lat-value&quot; class=&quot;tabular-nums&quot;&gt;30° N&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-lat&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-85&quot; max=&quot;85&quot; step=&quot;1&quot; value=&quot;30&quot; aria-label=&quot;Probe latitude&quot;&gt;&lt;/label&gt;
-  &lt;div class=&quot;gm-plot-heading&quot;&gt;&lt;h3&gt;Inclination across latitude&lt;/h3&gt;&lt;div class=&quot;gm-chart-legend text-small&quot;&gt;&lt;button type=&quot;button&quot; data-series=&quot;total&quot; aria-pressed=&quot;true&quot;&gt;&lt;i class=&quot;gm-line gm-total&quot;&gt;&lt;/i&gt;Combined&lt;/button&gt;&lt;button type=&quot;button&quot; data-series=&quot;gad&quot; aria-pressed=&quot;true&quot;&gt;&lt;i class=&quot;gm-line gm-d gm-dashed&quot;&gt;&lt;/i&gt;Dipole (GAD)&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;gm-probe-controls&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Probe latitude λ&lt;/span&gt;&lt;output id=&quot;gm-lat-value&quot; class=&quot;tabular-nums&quot;&gt;30° N&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-lat&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-85&quot; max=&quot;85&quot; step=&quot;1&quot; value=&quot;30&quot; aria-label=&quot;Probe latitude&quot;&gt;&lt;/label&gt;
+    &lt;label class=&quot;form-label&quot;&gt;&lt;span class=&quot;gm-weight-label&quot;&gt;&lt;span&gt;Probe / slice longitude φ&lt;/span&gt;&lt;output id=&quot;gm-lon-value&quot; class=&quot;tabular-nums&quot;&gt;0°&lt;/output&gt;&lt;/span&gt;&lt;input id=&quot;gm-lon&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-180&quot; max=&quot;180&quot; step=&quot;1&quot; value=&quot;0&quot; aria-label=&quot;Probe longitude&quot;&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;gm-plot-heading&quot;&gt;&lt;h3 id=&quot;gm-slice-title&quot;&gt;Inclination · longitude 0° slice&lt;/h3&gt;&lt;div class=&quot;gm-chart-legend text-small&quot;&gt;&lt;button type=&quot;button&quot; data-series=&quot;total&quot; aria-pressed=&quot;true&quot;&gt;&lt;i class=&quot;gm-line gm-total&quot;&gt;&lt;/i&gt;Combined&lt;/button&gt;&lt;button type=&quot;button&quot; data-series=&quot;gad&quot; aria-pressed=&quot;true&quot;&gt;&lt;i class=&quot;gm-line gm-d gm-dashed&quot;&gt;&lt;/i&gt;Dipole (GAD)&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
   &lt;div class=&quot;gm-plot-wrap&quot;&gt;&lt;svg id=&quot;gm-inclination&quot; role=&quot;img&quot; aria-label=&quot;Inclination versus latitude, comparing the combined magnetic field with the geocentric axial dipole prediction. Select a latitude to move the probe.&quot;&gt;&lt;/svg&gt;&lt;div id=&quot;gm-tooltip&quot; class=&quot;tooltip&quot; role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;text-small text-muted gm-bottom&quot;&gt;Inclination: down positive · component weights use one fixed dipole reference · field-line density is illustrative&lt;/div&gt;
+  &lt;div class=&quot;text-small text-muted gm-bottom&quot;&gt;Inclination uses the full horizontal field · vector arrows are projections · line density is illustrative&lt;/div&gt;
   &lt;section class=&quot;gm-equations&quot; aria-labelledby=&quot;gm-equations-title&quot;&gt;
     &lt;h3 id=&quot;gm-equations-title&quot;&gt;Equation setup&lt;/h3&gt;
-    &lt;p&gt;This playground adds the axisymmetric (m = 0) dipole, quadrupole, and octupole. All coefficients share a fixed reference B₀; the weights are signed Gauss-coefficient ratios to that reference, rather than fractions of total field strength.&lt;/p&gt;
-    &lt;div class=&quot;gm-math&quot; data-tex=&quot;\rho=r/a,\quad \mu=\cos\theta=\sin\lambda,\quad c=\cos\lambda&quot;&gt;ρ = r/a; μ = cos θ = sin λ; c = cos λ&lt;/div&gt;
-    &lt;div class=&quot;gm-math&quot; data-tex=&quot;(g_1^0,g_2^0,g_3^0)=-B_0(D,Q,O),\quad B_0&amp;gt;0&quot;&gt;(g₁⁰, g₂⁰, g₃⁰) = −B₀(D, Q, O), B₀ &amp;gt; 0&lt;/div&gt;
+    &lt;p&gt;Each component is an axisymmetric (zonal) dipole, quadrupole or octupole about its own independently chosen axis. Tilt moves that axis away from geographic north; azimuth sets its longitude, measured eastward from 0°. No spin control is needed about a symmetry axis. Examples restore all axes to geographic north; “Reset axes” preserves amplitudes.&lt;/p&gt;
+    &lt;p&gt;Rotating a zonal component introduces nonzero orders in geographic coordinates, but does not span all possible degree-2 or degree-3 shapes. A general quadrupole has five coefficients and can be represented by two axes; a general octupole has seven coefficients. This playground varies the strength and orientation of one axisymmetric shape per degree.&lt;/p&gt;
+    &lt;p&gt;Let a be the reference radius, ρ = r/a, r̂ the geographic radial unit vector, and âₙ the component&#x27;s unit axis. All coefficients share a fixed reference B₀ &amp;gt; 0. The signed amplitudes are local-axis Gauss coefficients divided by −B₀, not fractions of total field strength.&lt;/p&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;\hat{\mathbf a}_n=(\sin t_n\cos\alpha_n,\cos t_n,\sin t_n\sin\alpha_n),\quad u_n=\hat{\mathbf a}_n\cdot\hat{\mathbf r}&quot;&gt;âₙ = (sin tₙ cos αₙ, cos tₙ, sin tₙ sin αₙ); uₙ = âₙ · r̂&lt;/div&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;(g_1,g_2,g_3)=-B_0(D,Q,O),\quad V_n=a g_n\rho^{-n-1}P_n(u_n)&quot;&gt;(g₁, g₂, g₃) = −B₀(D, Q, O); Vₙ = a gₙ ρ⁻ⁿ⁻¹ Pₙ(uₙ)&lt;/div&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;\mathbf B_n=g_n\rho^{-n-2}\left[\left((n+1)P_n(u_n)+u_nP&#x27;_n(u_n)\right)\hat{\mathbf r}-P&#x27;_n(u_n)\hat{\mathbf a}_n\right]&quot;&gt;Bₙ = gₙ ρ⁻ⁿ⁻² {[(n+1)Pₙ(uₙ) + uₙP′ₙ(uₙ)]r̂ − P′ₙ(uₙ)âₙ}&lt;/div&gt;
+    &lt;p&gt;V = V₁ + V₂ + V₃ and B = −∇V = B₁ + B₂ + B₃. The Cartesian calculation above drives every view. The formulas below are the axial reference case only: tₙ = 0°, μ = sin λ, c = cos λ and gₙ = gₙ⁰.&lt;/p&gt;
     &lt;div class=&quot;gm-equation-grid&quot;&gt;
       &lt;div&gt;&lt;h4&gt;Dipole · n = 1&lt;/h4&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;P_1(\mu)=\mu&quot;&gt;P₁(μ) = μ&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;V_1=a g_1^0\rho^{-2}\mu&quot;&gt;V₁ = a g₁⁰ ρ⁻² μ&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{r,1}=2g_1^0\rho^{-3}\mu&quot;&gt;Bᵣ,₁ = 2 g₁⁰ ρ⁻³ μ&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{N,1}=-g_1^0\rho^{-3}c&quot;&gt;Bₙ,₁ = −g₁⁰ ρ⁻³ c&lt;/div&gt;&lt;/div&gt;
       &lt;div&gt;&lt;h4&gt;Quadrupole · n = 2&lt;/h4&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;P_2(\mu)=\tfrac12(3\mu^2-1)&quot;&gt;P₂(μ) = (3 μ² − 1)/2&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;V_2=a g_2^0\rho^{-3}P_2(\mu)&quot;&gt;V₂ = a g₂⁰ ρ⁻³ P₂(μ)&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{r,2}=3g_2^0\rho^{-4}P_2(\mu)&quot;&gt;Bᵣ,₂ = 3 g₂⁰ ρ⁻⁴ P₂(μ)&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{N,2}=-3g_2^0\rho^{-4}\mu c&quot;&gt;Bₙ,₂ = −3 g₂⁰ ρ⁻⁴ μ c&lt;/div&gt;&lt;/div&gt;
       &lt;div&gt;&lt;h4&gt;Octupole · n = 3&lt;/h4&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;P_3(\mu)=\tfrac12(5\mu^3-3\mu)&quot;&gt;P₃(μ) = (5 μ³ − 3 μ)/2&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;V_3=a g_3^0\rho^{-4}P_3(\mu)&quot;&gt;V₃ = a g₃⁰ ρ⁻⁴ P₃(μ)&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{r,3}=4g_3^0\rho^{-5}P_3(\mu)&quot;&gt;Bᵣ,₃ = 4 g₃⁰ ρ⁻⁵ P₃(μ)&lt;/div&gt;&lt;div class=&quot;gm-math&quot; data-tex=&quot;B_{N,3}=-\tfrac32g_3^0\rho^{-5}(5\mu^2-1)c&quot;&gt;Bₙ,₃ = −(3/2) g₃⁰ ρ⁻⁵ (5 μ² − 1) c&lt;/div&gt;&lt;/div&gt;
     &lt;/div&gt;
-    &lt;p&gt;The exterior potential is V = V₁ + V₂ + V₃ and B = −∇V. The east component is zero for this axial model. North is positive toward geographic north; down is positive into Earth.&lt;/p&gt;
+    &lt;p&gt;At the selected latitude and longitude, project the summed vector onto geographic north, east and down. East generally becomes nonzero when axes are tilted. North is positive toward geographic north; down is positive into Earth.&lt;/p&gt;
     &lt;p&gt;The radial-field lobe glyph samples Bᵣ at r = a and makes its display radius scale with |Bᵣ|. It is a scalar-field glyph, rather than Earth&#x27;s surface or a field-line trajectory. Surface colors also sample the field at r = a, including in glyph mode.&lt;/p&gt;
     &lt;div class=&quot;gm-math&quot; data-tex=&quot;B_N/B_0=c\left[D+3Q\mu+\tfrac32O(5\mu^2-1)\right]\quad(\rho=1)&quot;&gt;At r = a: Bₙ/B₀ = c[D + 3 Q μ + (3/2) O (5 μ² − 1)]&lt;/div&gt;
     &lt;div class=&quot;gm-math&quot; data-tex=&quot;B_D/B_0=2D\mu+\tfrac32Q(3\mu^2-1)+2O(5\mu^3-3\mu)\quad(\rho=1)&quot;&gt;At r = a: Bᴅ/B₀ = 2 D μ + (3/2) Q (3 μ² − 1) + 2 O (5 μ³ − 3 μ)&lt;/div&gt;
-    &lt;div class=&quot;gm-math&quot; data-tex=&quot;B_D=-B_r,\quad H=|B_N|,\quad I=\operatorname{atan2}(B_D,H)&quot;&gt;Bᴅ = −Bᵣ; H = |Bₙ|; I = atan2(Bᴅ, H)&lt;/div&gt;
-    &lt;div class=&quot;gm-math&quot; data-tex=&quot;G_2=Q/D,\quad G_3=O/D\quad(D&amp;gt;0)&quot;&gt;G₂ = Q/D; G₃ = O/D, for D &amp;gt; 0&lt;/div&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;B_D=-B_r,\quad H=\sqrt{B_N^2+B_E^2},\quad I=\operatorname{atan2}(B_D,H)&quot;&gt;Bᴅ = −Bᵣ; H = √(Bₙ² + Bₑ²); I = atan2(Bᴅ, H)&lt;/div&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;\mathrm{Dec}=\operatorname{atan2}(B_E,B_N)&quot;&gt;Declination = atan2(Bₑ, Bₙ), positive east of north&lt;/div&gt;
+    &lt;p&gt;Directions are undefined when |B| ≤ 10⁻⁹ B₀; declination is also undefined when H ≤ 10⁻⁹ B₀. The vector diagram offers north/down and north/east projections. Each shows the projected head-to-tail sum; inclination always uses the full H, including east.&lt;/p&gt;
+    &lt;div class=&quot;gm-math&quot; data-tex=&quot;G_2=Q/D,\quad G_3=O/D\quad(D&amp;gt;0)&quot;&gt;G₂ = Q/D; G₃ = O/D, for D &amp;gt; 0 (local-axis amplitude ratios)&lt;/div&gt;
     &lt;div class=&quot;gm-math&quot; data-tex=&quot;\tan I_{\rm GAD}=2\tan\lambda,\qquad \lambda_{\rm inferred}=\arctan\!\left(\tfrac12\tan I\right)&quot;&gt;GAD: tan I = 2 tan λ; inferred λ = arctan[(tan I)/2]&lt;/div&gt;
-    &lt;p&gt;At 30°N, D = 1, Q = 0, O = +0.15 gives Bₙ/B₀ = 0.9147 and Bᴅ/B₀ = 0.7375. The octupole contribution is northward and upward here, so it partly cancels the dipole&#x27;s downward field: I changes from 49.1° to 38.9°.&lt;/p&gt;
-    &lt;details&gt;&lt;summary&gt;Why does the axial octupole show six loops?&lt;/summary&gt;&lt;p&gt;“Octupole” labels degree 3. This axial m = 0 field has three field-line cells on either side of a meridional cross-section: six loop regions. Its radial-field map has four alternating latitude zones: two polar caps and two belts. A lobe glyph rotates those caps and belts around the axis. Other m terms have different geometries, including familiar eight-lobed patterns.&lt;/p&gt;&lt;p&gt;For a pure axial octupole, Bᵣ is zero at latitudes 0° and ±50.77°. Bθ is zero at ±26.565°, dividing each meridional half-plane into three field-line cells. The full geomagnetic octupole also includes non-axial terms, which are outside this playground.&lt;/p&gt;&lt;/details&gt;
-    &lt;p class=&quot;text-small text-muted&quot;&gt;Sources: &lt;a href=&quot;https://www.ncei.noaa.gov/products/international-geomagnetic-reference-field&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;NOAA: geomagnetic potential&lt;/a&gt; · &lt;a href=&quot;https://spacephysics.ucla.edu/PotentialField/RotatablePotentialFields.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCLA: multipole geometries&lt;/a&gt; · &lt;a href=&quot;https://doi.org/10.1016/j.pepi.2013.07.007&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heimpel &amp;amp; Evans (2013): inclination anomalies&lt;/a&gt;. This is an idealized hypothesis explorer, rather than an IGRF reconstruction or a sediment-compaction model.&lt;/p&gt;
+    &lt;p&gt;The apparent GAD latitude is an inclination-only proxy, λ* = atan2(Bᴅ, 2H). It assumes a normal-polarity geographic GAD. It is suppressed for southward or vertical horizontal directions (Bₙ ≤ 10⁻⁹ B₀), and for a null field. No automatic polarity correction is made. Tilted or nondipole fields violate the GAD assumption, so this is not a geographic latitude estimate.&lt;/p&gt;
+    &lt;p&gt;With all tilts at 0°, at 30°N, D = 1, Q = 0, O = +0.15 gives Bₙ/B₀ = 0.9147 and Bᴅ/B₀ = 0.7375. The octupole contribution is northward and upward here, so it partly cancels the dipole&#x27;s downward field: I changes from 49.1° to 38.9°.&lt;/p&gt;
+    &lt;p&gt;The latitude chart is a surface slice at the selected longitude. Field lines are integrated in 3D from multiple longitudes. The selected-meridian camera projects true 3D traces onto that meridian; curves can leave the plane. For geographic axial fields only, seeds are restricted to that meridian to show the planar cells. The equatorial camera projects onto the equatorial plane, viewed from geographic north. Neither fixed camera shows a generally planar field-line solution.&lt;/p&gt;
+    &lt;details&gt;&lt;summary&gt;Why does the axial octupole show six loops?&lt;/summary&gt;&lt;p&gt;“Octupole” labels degree 3. This axial m = 0 field has three field-line cells on either side of a meridional cross-section: six loop regions. Its radial-field map has four alternating latitude zones: two polar caps and two belts. A lobe glyph rotates those caps and belts around the axis. Other m terms have different geometries, including familiar eight-lobed patterns.&lt;/p&gt;&lt;p&gt;For a pure axial octupole, Bᵣ is zero at latitudes 0° and ±50.77°. Bθ is zero at ±26.565°, dividing each meridional half-plane into three field-line cells. Tilting rotates this axisymmetric pattern intact. General degree-3 shapes require additional parameters beyond those offered here.&lt;/p&gt;&lt;/details&gt;
+    &lt;p class=&quot;text-small text-muted&quot;&gt;Sources: &lt;a href=&quot;https://doi.org/10.1007/BF00874956&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Winch &amp;amp; Slaucitajs (1966): multipole strengths and axes&lt;/a&gt; · &lt;a href=&quot;https://doi.org/10.1111/j.1365-246X.1982.tb04926.x&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Willis (1982): general quadrupole axes&lt;/a&gt; · &lt;a href=&quot;https://www.ncei.noaa.gov/products/international-geomagnetic-reference-field&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;NOAA: geomagnetic potential&lt;/a&gt; · &lt;a href=&quot;https://spacephysics.ucla.edu/PotentialField/RotatablePotentialFields.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UCLA: multipole geometries&lt;/a&gt; · &lt;a href=&quot;https://doi.org/10.1016/j.pepi.2013.07.007&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Heimpel &amp;amp; Evans (2013): inclination anomalies&lt;/a&gt;. This is an idealized hypothesis explorer, rather than an IGRF reconstruction or a sediment-compaction model.&lt;/p&gt;
   &lt;/section&gt;
 &lt;/div&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css&quot;&gt;
@@ -1865,6 +1894,16 @@ html&gt;body{padding:0}&lt;/style&gt;
 #geomag-lab h3{margin:0;font-weight:500}
 #geomag-lab .gm-subtitle{margin-bottom:16px}
 #geomag-lab .gm-weights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+#geomag-lab .gm-component{min-width:0;border:1px solid var(--border);border-radius:8px;padding:10px 14px;margin:0}
+#geomag-lab .gm-component legend{padding:0 5px;font-weight:500}
+#geomag-lab .gm-component label{display:block;margin-bottom:5px}
+#geomag-lab .gm-orientation-note{margin:8px 0}
+#geomag-lab #gm-reset-axes{border:1px solid var(--border);background:var(--background);color:var(--foreground);border-radius:5px;padding:6px 10px;cursor:pointer}
+#geomag-lab .gm-probe-controls{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+#geomag-lab .gm-vector-controls{margin:6px 0 0}
+#geomag-lab .gm-vector-controls label{display:flex;align-items:center;gap:8px}
+#geomag-lab .gm-canvas-label.gm-axis-label{color:var(--gm-ink);font-size:11px;font-weight:500;text-shadow:0 0 3px var(--background),0 0 3px var(--background)}
+#geomag-lab #gm-ned{font-size:12px}
 #geomag-lab .gm-weight-label{display:flex;align-items:center;justify-content:space-between;gap:10px}
 #geomag-lab .gm-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;background:var(--gm-ink);vertical-align:middle}
 #geomag-lab .gm-d{--gm-ink:var(--viz-series-2)}
@@ -1909,6 +1948,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 @media(max-width:820px){#geomag-lab .gm-equation-grid{grid-template-columns:1fr}}
 #geomag-lab #gm-webgl-error{position:absolute;inset:40px 20px}
 @media(max-width:680px){#geomag-lab .gm-main{grid-template-columns:minmax(0,1fr);gap:8px}#geomag-lab .gm-observer{padding-top:0}#geomag-lab #gm-vector{height:190px}#geomag-lab .gm-weights{gap:12px}#geomag-lab .gm-stage{height:330px}}
+@media(max-width:560px){#geomag-lab .gm-weights{grid-template-columns:1fr;gap:10px}#geomag-lab .gm-probe-controls{grid-template-columns:1fr;gap:8px}}
 @media(max-width:430px){#geomag-lab .gm-weights{grid-template-columns:1fr;gap:6px}#geomag-lab .gm-stage{height:290px}#geomag-lab .gm-plot-heading{align-items:flex-start}#geomag-lab .gm-canvas-label{font-size:12px}}
 &lt;/style&gt;
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js&quot;&gt;&lt;/script&gt;
@@ -1923,55 +1963,79 @@ html&gt;body{padding:0}&lt;/style&gt;
   function polynomials(s) {
     return [[s,1],[(3*s*s-1)/2,3*s],[(5*s*s*s-3*s)/2,(15*s*s-3)/2]];
   }
-  // Dimensionless radius r/R. All g_n^0 = -weight_n relative to |g_1,reference^0|.
-  // B = -grad V, V = sum_n g_n^0 r^(-n-1) P_n(cos theta).
-  function fieldAt(p,w) {
-    const r = Math.hypot(...p);
-    if (r &lt; 1e-12) return [0,0,0];
-    const s = p[1]/r, rho = Math.hypot(p[0],p[2]), t = rho/r;
-    const cp = rho &gt; 1e-12 ? p[0]/rho : 1, sp = rho &gt; 1e-12 ? p[2]/rho : 0;
-    const leg = polynomials(s);
-    let br = 0, bt = 0;
-    for (let j=0;j&lt;3;j++) {
-      const g = -w[j] * Math.pow(r,-j-3);
-      br += (j+2)*g*leg[j][0];
-      bt += g*t*leg[j][1];
+  const AXIAL_AXES = [[0,1,0],[0,1,0],[0,1,0]];
+  const DIRECTION_EPS = 1e-9; // Field units relative to the fixed B0 reference.
+  // World coordinates: +y = geographic north, +x = equator at 0°, +z = 90°E.
+  function axisFromAngles(tilt,azimuth) {
+    const t=tilt*RAD,a=azimuth*RAD;
+    return [Math.sin(t)*Math.cos(a),Math.cos(t),Math.sin(t)*Math.sin(a)];
+  }
+  function geographicBasis(lat,lon=0) {
+    const a=lat*RAD,b=lon*RAD,s=Math.sin(a),c=Math.cos(a),cp=Math.cos(b),sp=Math.sin(b);
+    return {radial:[c*cp,s,c*sp],north:[-s*cp,c,-s*sp],east:[-sp,0,cp]};
+  }
+  const dot = (a,b) =&gt; a.reduce((v,x,j)=&gt;v+x*b[j],0);
+  // Dimensionless r/R; g_n = -weight_n relative to B0. Each P_n is zonal
+  // about its own unit axis. B = -grad V is evaluated directly in world space.
+  function potentialAt(p,w,axes=AXIAL_AXES) {
+    const r=Math.hypot(...p);
+    if(r&lt;1e-12)return 0;
+    const rhat=p.map(v=&gt;v/r);
+    return w.reduce((v,a,j)=&gt;v-a*Math.pow(r,-j-2)*polynomials(dot(axes[j],rhat))[j][0],0);
+  }
+  function fieldAt(p,w,axes=AXIAL_AXES) {
+    const r=Math.hypot(...p);
+    if(r&lt;1e-12)return [0,0,0];
+    const rhat=p.map(v=&gt;v/r),b=[0,0,0];
+    for(let j=0;j&lt;3;j++) {
+      if(w[j]===0)continue;
+      const axis=axes[j],u=dot(axis,rhat),[P,dP]=polynomials(u)[j],g=-w[j]*Math.pow(r,-j-3);
+      for(let k=0;k&lt;3;k++)b[k]+=g*(((j+2)*P+u*dP)*rhat[k]-dP*axis[k]);
     }
-    return [br*t*cp+bt*s*cp, br*s-bt*t, br*t*sp+bt*s*sp];
+    return b;
   }
-  function localAt(lat,w) {
-    const s=Math.sin(lat*RAD), c=Math.cos(lat*RAD), leg=polynomials(s);
-    const components=w.map((a,j)=&gt;[a*c*leg[j][1],(j+2)*a*leg[j][0]]);
-    const north=components.reduce((v,b)=&gt;v+b[0],0), down=components.reduce((v,b)=&gt;v+b[1],0);
-    const magnitude=Math.hypot(north,down);
-    const I=magnitude&gt;1e-9?Math.atan2(down,Math.abs(north))/RAD:null;
-    const gad=Math.atan2(2*s,c)/RAD;
-    const inferred=I!==null &amp;&amp; north&gt;1e-9 ? Math.atan2(down,2*north)/RAD:null;
-    return {north,down,components,magnitude,I,gad,inferred};
+  function localAt(lat,w,axes=AXIAL_AXES,lon=0) {
+    const basis=geographicBasis(lat,lon);
+    const components=w.map((a,j)=&gt;{
+      const b=fieldAt(basis.radial,w.map((v,k)=&gt;k===j?a:0),axes);
+      return [dot(b,basis.north),-dot(b,basis.radial),dot(b,basis.east)];
+    });
+    const north=components.reduce((v,b)=&gt;v+b[0],0),down=components.reduce((v,b)=&gt;v+b[1],0),east=components.reduce((v,b)=&gt;v+b[2],0);
+    const horizontal=Math.hypot(north,east),magnitude=Math.hypot(horizontal,down);
+    const I=magnitude&gt;DIRECTION_EPS?Math.atan2(down,horizontal)/RAD:null;
+    const declination=magnitude&gt;DIRECTION_EPS&amp;&amp;horizontal&gt;DIRECTION_EPS?Math.atan2(east,north)/RAD:null;
+    const gad=Math.atan2(2*Math.sin(lat*RAD),Math.cos(lat*RAD))/RAD;
+    // An inclination-only proxy under an assumed normal, geographic GAD.
+    // Do not infer normal-polarity latitude for a southward or vertical field.
+    const inferred=I!==null&amp;&amp;north&gt;DIRECTION_EPS?Math.atan2(down,2*horizontal)/RAD:null;
+    return {north,east,down,components,horizontal,magnitude,I,declination,gad,inferred};
   }
-  function surfaceStats(w) {
+  function surfaceStats(w,axes=AXIAL_AXES) {
     let maxRadial=0,maxStrength=0;
-    for(let j=0;j&lt;=720;j++) {
-      const v=localAt(-90+j/4,w);
-      maxRadial=Math.max(maxRadial,Math.abs(v.down));
-      maxStrength=Math.max(maxStrength,v.magnitude);
+    function sample(p) {
+      const b=fieldAt(p,w,axes);
+      maxRadial=Math.max(maxRadial,Math.abs(dot(p,b)));
+      maxStrength=Math.max(maxStrength,Math.hypot(...b));
     }
+    // Sample the full sphere (not just one latitude profile), plus exact axes.
+    for(let lat=-90;lat&lt;=90;lat+=5)for(let lon=0;lon&lt;360;lon+=5)sample(geographicBasis(lat,lon).radial);
+    axes.forEach(a=&gt;{sample(a);sample(a.map(v=&gt;-v));});
     return {maxRadial,maxStrength};
   }
-  function unitField(p,w) {
-    const b=fieldAt(p,w), norm=Math.hypot(...b);
+  function unitField(p,w,axes=AXIAL_AXES) {
+    const b=fieldAt(p,w,axes), norm=Math.hypot(...b);
     return norm&gt;1e-10?b.map(v=&gt;v/norm):[0,0,0];
   }
-  function trace(seed,w,direction=1) {
+  function trace(seed,w,direction=1,axes=AXIAL_AXES) {
     const points=[seed.slice()];
     let p=seed.slice();
     for(let k=0;k&lt;650;k++) {
       const r=Math.hypot(...p), h=Math.min(.04,.018*r);
-      const k1=unitField(p,w).map(v=&gt;direction*v);
+      const k1=unitField(p,w,axes).map(v=&gt;direction*v);
       if(Math.hypot(...k1)&lt;.5) break;
-      const k2=unitField(p.map((v,j)=&gt;v+h*k1[j]/2),w).map(v=&gt;direction*v);
-      const k3=unitField(p.map((v,j)=&gt;v+h*k2[j]/2),w).map(v=&gt;direction*v);
-      const k4=unitField(p.map((v,j)=&gt;v+h*k3[j]),w).map(v=&gt;direction*v);
+      const k2=unitField(p.map((v,j)=&gt;v+h*k1[j]/2),w,axes).map(v=&gt;direction*v);
+      const k3=unitField(p.map((v,j)=&gt;v+h*k2[j]/2),w,axes).map(v=&gt;direction*v);
+      const k4=unitField(p.map((v,j)=&gt;v+h*k3[j]),w,axes).map(v=&gt;direction*v);
       let next=p.map((v,j)=&gt;v+h*(k1[j]+2*k2[j]+2*k3[j]+k4[j])/6);
       const nr=Math.hypot(...next);
       if(nr&lt;1) {
@@ -1991,16 +2055,22 @@ html&gt;body{padding:0}&lt;/style&gt;
     return points;
   }
   // PHYSICS_END
-  const initial={weights:[1,0,.15],latitude:30,view:&#x27;3d&#x27;,example:&#x27;shallow&#x27;,display:&#x27;lines&#x27;,coloring:&#x27;polarity&#x27;,palette:&#x27;redblue&#x27;,visible:{total:true,gad:true},azimuth:.48,elevation:.24,zoom:1};
-  let state={...initial,weights:initial.weights.slice(),visible:{...initial.visible}};
+  const initial={weights:[1,0,.15],orientations:[[0,0],[0,0],[0,0]],longitude:0,vectorPlane:&#x27;nd&#x27;,latitude:30,view:&#x27;3d&#x27;,example:&#x27;shallow&#x27;,display:&#x27;lines&#x27;,coloring:&#x27;polarity&#x27;,palette:&#x27;redblue&#x27;,visible:{total:true,gad:true},azimuth:.48,elevation:.24,zoom:1};
+  let state={...initial,weights:initial.weights.slice(),orientations:initial.orientations.map(a=&gt;a.slice()),visible:{...initial.visible}};
   const examples={shallow:[1,0,.15],gad:[1,0,0],steep:[1,0,-.15],quadrupole:[1,.1,0],pureq:[0,1,0],pureo:[0,0,1]};
   // Pure-component examples use a 0.5 reference coefficient to fit the control ranges.
   examples.pureq=[0,.5,0];examples.pureo=[0,0,.5];
+  const axes = () =&gt; state.orientations.map(a=&gt;axisFromAngles(...a));
+  const local = (lat=state.latitude,w=state.weights,lon=state.longitude) =&gt; localAt(lat,w,axes(),lon);
+  // STATE_START
   const validNum=(v,min,max,def)=&gt;typeof v===&#x27;number&#x27;&amp;&amp;Number.isFinite(v)?Math.max(min,Math.min(max,v)):def;
   function restore(saved) {
     const v=saved?.modelContent,p=saved?.privateContent;
-    if(v?.version===1) {
+    if(v?.version===1||v?.version===2) {
       if(Array.isArray(v.weights)&amp;&amp;v.weights.length===3) state.weights=v.weights.map((x,j)=&gt;validNum(x,j===0?0:-.5,j===0?1.5:.5,initial.weights[j]));
+      state.orientations=initial.orientations.map((a,j)=&gt;[validNum(v.orientations?.[j]?.[0],0,180,0),validNum(v.orientations?.[j]?.[1],-180,180,0)]);
+      state.longitude=validNum(v.longitude,-180,180,0);
+      state.vectorPlane=v.vectorPlane===&#x27;ne&#x27;?&#x27;ne&#x27;:&#x27;nd&#x27;;
       state.latitude=validNum(v.latitude,-85,85,30);
       if([&#x27;3d&#x27;,&#x27;meridian&#x27;,&#x27;equator&#x27;].includes(v.view)) state.view=v.view;
       if([&#x27;lines&#x27;,&#x27;arrows&#x27;,&#x27;both&#x27;,&#x27;lobes&#x27;].includes(v.display))state.display=v.display;
@@ -2015,17 +2085,19 @@ html&gt;body{padding:0}&lt;/style&gt;
       state.zoom=validNum(p.zoom,.6,1.7,1);
     }
   }
+  // STATE_END
   restore(window.openai?.widgetState);
   function persist() {
     const api=window.openai;
-    if(api?.setWidgetState) api.setWidgetState({modelContent:{version:1,weights:state.weights.slice(),latitude:state.latitude,view:state.view,example:state.example,display:state.display,coloring:state.coloring,palette:state.palette,visible:{...state.visible}},privateContent:{azimuth:state.azimuth,elevation:state.elevation,zoom:state.zoom}}).catch(()=&gt;{});
+    if(api?.setWidgetState) api.setWidgetState({modelContent:{version:2,weights:state.weights.slice(),orientations:state.orientations.map(a=&gt;a.slice()),longitude:state.longitude,vectorPlane:state.vectorPlane,latitude:state.latitude,view:state.view,example:state.example,display:state.display,coloring:state.coloring,palette:state.palette,visible:{...state.visible}},privateContent:{azimuth:state.azimuth,elevation:state.elevation,zoom:state.zoom}}).catch(()=&gt;{});
   }
   const fmt=(v,d=1)=&gt;v===null?&#x27;Undefined&#x27;:((Math.abs(v)&lt;Math.pow(10,-d)/2?0:v).toFixed(d));
   const signed=(v,d=1)=&gt;(v&gt;=.5*Math.pow(10,-d)?&#x27;+&#x27;:&#x27;&#x27;)+fmt(v,d);
   const latLabel=v=&gt;Math.abs(v)&lt;.01?&#x27;0°&#x27;:fmt(Math.abs(v),Number.isInteger(v)?0:1)+&#x27;° &#x27;+(v&lt;0?&#x27;S&#x27;:&#x27;N&#x27;);
+  const lonLabel=v=&gt;Math.abs(v)&lt;.01?&#x27;0°&#x27;:fmt(Math.abs(v),Number.isInteger(v)?0:1)+&#x27;° &#x27;+(v&lt;0?&#x27;W&#x27;:&#x27;E&#x27;);
   const vectorSvg=d3.select($(&#x27;gm-vector&#x27;)), chartSvg=d3.select($(&#x27;gm-inclination&#x27;));
-  let renderer,scene,camera,fieldGroup,probeGroup,glyphGroup,surfaceVectorGroup,sphereMesh,neutral,ink,totalColor,componentColors,positiveColor,negativeColor,zeroColor,themeKey=&#x27;&#x27;,sceneReady=false;
-  let limits=surfaceStats(state.weights);
+  let renderer,scene,camera,fieldGroup,probeGroup,glyphGroup,surfaceVectorGroup,axisGroup,sphereMesh,neutral,ink,totalColor,componentColors,positiveColor,negativeColor,zeroColor,themeKey=&#x27;&#x27;,sceneReady=false;
+  let limits=surfaceStats(state.weights,axes());
   const palettes={redblue:[&#x27;--red&#x27;,&#x27;--blue&#x27;],purplegreen:[&#x27;--purple&#x27;,&#x27;--green&#x27;],orangeblue:[&#x27;--orange&#x27;,&#x27;--blue&#x27;]};
   const stage=$(&#x27;gm-stage&#x27;);
   const scratchCanvas=document.createElement(&#x27;canvas&#x27;);scratchCanvas.width=scratchCanvas.height=1;
@@ -2059,8 +2131,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     renderer.setClearAlpha(0);renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.domElement.setAttribute(&#x27;aria-hidden&#x27;,&#x27;true&#x27;);stage.prepend(renderer.domElement);
     fieldGroup=new THREE.Group();probeGroup=new THREE.Group();
-    glyphGroup=new THREE.Group();surfaceVectorGroup=new THREE.Group();
-    scene.add(fieldGroup,probeGroup,glyphGroup,surfaceVectorGroup);
+    glyphGroup=new THREE.Group();surfaceVectorGroup=new THREE.Group();axisGroup=new THREE.Group();
+    scene.add(fieldGroup,probeGroup,glyphGroup,surfaceVectorGroup,axisGroup);
     sceneReady=true;updateTheme(true);
   }
   let staticGroup;
@@ -2090,7 +2162,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   function surfaceColor(value) {
     const out=-value.down;
     if(state.coloring===&#x27;neutral&#x27;)return zeroColor.clone();
-    if(state.coloring===&#x27;strength&#x27;)return zeroColor.clone().lerp(positiveColor,limits.maxStrength&gt;1e-9?value.magnitude/limits.maxStrength:0);
+    if(state.coloring===&#x27;strength&#x27;)return zeroColor.clone().lerp(positiveColor,limits.maxStrength&gt;1e-9?Math.min(1,value.magnitude/limits.maxStrength):0);
     const signedValue=state.coloring===&#x27;inclination&#x27;?(value.I??0):out;
     if(Math.abs(signedValue)&lt;1e-9)return zeroColor.clone();
     const target=signedValue&gt;0?positiveColor:negativeColor;
@@ -2102,8 +2174,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     const [plus,minus]=palettes[state.palette],zero=zeroColor.getStyle(THREE.SRGBColorSpace);
     const configs={
       polarity:[&#x27;Inward (−Bᵣ)&#x27;,&#x27;Outward (+Bᵣ)&#x27;,&#x27;Radial polarity&#x27;, &#x27;linear-gradient(90deg,var(&#x27;+minus+&#x27;) 0% 49.5%,var(&#x27;+plus+&#x27;) 50.5% 100%)&#x27;],
-      radial:[&#x27;−&#x27;+fmt(limits.maxRadial,2),&#x27;+&#x27;+fmt(limits.maxRadial,2),&#x27;Bᵣ / B₀ · normalized to surface extrema&#x27;,&#x27;linear-gradient(90deg,var(&#x27;+minus+&#x27;),&#x27;+zero+&#x27;,var(&#x27;+plus+&#x27;))&#x27;],
-      strength:[&#x27;0&#x27;,fmt(limits.maxStrength,2),&#x27;|B| / B₀ · normalized to surface maximum&#x27;,&#x27;linear-gradient(90deg,&#x27;+zero+&#x27;,var(&#x27;+plus+&#x27;))&#x27;],
+      radial:[&#x27;−&#x27;+fmt(limits.maxRadial,2),&#x27;+&#x27;+fmt(limits.maxRadial,2),&#x27;Bᵣ / B₀ · scaled to sampled surface extrema&#x27;,&#x27;linear-gradient(90deg,var(&#x27;+minus+&#x27;),&#x27;+zero+&#x27;,var(&#x27;+plus+&#x27;))&#x27;],
+      strength:[&#x27;0&#x27;,fmt(limits.maxStrength,2),&#x27;|B| / B₀ · scaled to sampled surface maximum&#x27;,&#x27;linear-gradient(90deg,&#x27;+zero+&#x27;,var(&#x27;+plus+&#x27;))&#x27;],
       inclination:[&#x27;−90° · up&#x27;,&#x27;+90° · down&#x27;,&#x27;Inclination&#x27;,&#x27;linear-gradient(90deg,var(&#x27;+minus+&#x27;),&#x27;+zero+&#x27;,var(&#x27;+plus+&#x27;))&#x27;]
     };
     if(state.coloring===&#x27;neutral&#x27;){legend.textContent=&#x27;Neutral surface · no field quantity encoded&#x27;;return;}
@@ -2114,14 +2186,15 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
   function updateSurface() {
     if(!sceneReady)return;
-    limits=surfaceStats(state.weights);
+    limits=surfaceStats(state.weights,axes());
     const [plus,minus]=palettes[state.palette];
     positiveColor=colorToken(plus);negativeColor=colorToken(minus);
     zeroColor=colorToken(&#x27;--background&#x27;).lerp(ink,.12);
     const pos=sphereMesh.geometry.attributes.position,colors=new Float32Array(pos.count*3);
     for(let i=0;i&lt;pos.count;i++) {
       const lat=Math.asin(Math.max(-1,Math.min(1,pos.getY(i))))/RAD;
-      const color=surfaceColor(localAt(lat,state.weights));
+      const lon=Math.atan2(pos.getZ(i),pos.getX(i))/RAD;
+      const color=surfaceColor(local(lat,state.weights,lon));
       colors.set([color.r,color.g,color.b],i*3);
     }
     sphereMesh.geometry.setAttribute(&#x27;color&#x27;,new THREE.BufferAttribute(colors,3));
@@ -2130,7 +2203,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     if(state.display===&#x27;lobes&#x27;&amp;&amp;limits.maxRadial&gt;1e-9) {
       const geometry=new THREE.SphereGeometry(1,128,100),vertices=geometry.attributes.position,glyphColors=new Float32Array(vertices.count*3);
       for(let i=0;i&lt;vertices.count;i++) {
-        const unit=new THREE.Vector3().fromBufferAttribute(vertices,i),lat=Math.asin(Math.max(-1,Math.min(1,unit.y)))/RAD,v=localAt(lat,state.weights);
+        const unit=new THREE.Vector3().fromBufferAttribute(vertices,i),lat=Math.asin(Math.max(-1,Math.min(1,unit.y)))/RAD,lon=Math.atan2(unit.z,unit.x)/RAD,v=local(lat,state.weights,lon);
         const radius=.012+1.7*Math.abs(v.down)/limits.maxRadial;
         const color=surfaceColor(v);glyphColors.set([color.r,color.g,color.b],i*3);
         unit.multiplyScalar(radius);vertices.setXYZ(i,unit.x,unit.y,unit.z);
@@ -2141,7 +2214,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     if(state.display===&#x27;arrows&#x27;||state.display===&#x27;both&#x27;) {
       for(let lat=-75;lat&lt;=75;lat+=25)for(let j=0;j&lt;12;j++) {
         const a=lat*RAD,phi=j*Math.PI/6,p=new THREE.Vector3(Math.cos(a)*Math.cos(phi),Math.sin(a),Math.cos(a)*Math.sin(phi));
-        const b=new THREE.Vector3(...fieldAt(p.toArray(),state.weights)),v=localAt(lat,state.weights);
+        const b=new THREE.Vector3(...fieldAt(p.toArray(),state.weights,axes())),v=local(lat,state.weights,phi/RAD);
         if(b.length()&lt;1e-8)continue;
         const length=.18+.28*v.magnitude/Math.max(1e-9,limits.maxStrength);
         const arrow=new THREE.ArrowHelper(b.normalize(),p.clone().multiplyScalar(1.025),length,ink,.095,.055);
@@ -2153,21 +2226,31 @@ html&gt;body{padding:0}&lt;/style&gt;
     probeGroup.visible=state.display!==&#x27;lobes&#x27;;
     $(&#x27;gm-gad-key&#x27;).hidden=state.display===&#x27;lobes&#x27;;
     $(&#x27;gm-scene-note&#x27;).textContent=state.display===&#x27;lobes&#x27;?&#x27;Glyph radius: normalized |Bᵣ| · reference grid: R&#x27;:state.display===&#x27;arrows&#x27;?&#x27;Vectors at r = R · lengths scaled&#x27;:&#x27;Exterior · r ≤ 2.2 R&#x27;;
+    if(state.view===&#x27;meridian&#x27;)$(&#x27;gm-scene-note&#x27;).textContent=&#x27;Projected 3D traces onto &#x27;+lonLabel(state.longitude)+&#x27; meridian; paths may leave plane&#x27;;
+    else if(state.view===&#x27;equator&#x27;)$(&#x27;gm-scene-note&#x27;).textContent=&#x27;Projection onto equatorial plane; viewing from geographic north&#x27;;
     updateColorLegend();
   }
   function rebuildField() {
     if(!sceneReady)return;
     updateSurface();
-    disposeGroup(fieldGroup);
+    disposeGroup(fieldGroup);disposeGroup(axisGroup);
+    axes().forEach((a,j)=&gt;{
+      const axis=new THREE.Vector3(...a),opacity=Math.abs(state.weights[j])&gt;1e-8?.75:.22;
+      const shaft=line3([axis.clone().multiplyScalar(-1.38).toArray(),axis.clone().multiplyScalar(1.38).toArray()],componentColors[j],opacity,true);
+      shaft.material.depthTest=false;shaft.renderOrder=20;axisGroup.add(shaft);
+      const arrow=new THREE.ArrowHelper(axis,axis.clone().multiplyScalar(1.25),.16,componentColors[j],.09,.045);
+      arrow.traverse(o=&gt;{if(o.material){o.material.depthTest=false;o.material.transparent=true;o.material.opacity=opacity;}o.renderOrder=20;});axisGroup.add(arrow);
+    });
     if(![&#x27;lines&#x27;,&#x27;both&#x27;].includes(state.display)){renderScene();return;}
     if(state.weights.every(v=&gt;Math.abs(v)&lt;1e-8)) {renderScene();return;}
-    const phis=state.view===&#x27;meridian&#x27;?[0,Math.PI]:Array.from({length:6},(_,j)=&gt;j*Math.PI/3);
+    const geographicAxial=axes().every((a,j)=&gt;Math.abs(state.weights[j])&lt;1e-8||Math.abs(a[1])&gt;1-1e-10);
+    const phis=state.view===&#x27;meridian&#x27;&amp;&amp;geographicAxial?[state.longitude*RAD,state.longitude*RAD+Math.PI]:Array.from({length:6},(_,j)=&gt;j*Math.PI/3);
     for(const phi of phis) for(let lat=-84;lat&lt;=84;lat+=7) {
       const a=lat*RAD,seed=[1.003*Math.cos(a)*Math.cos(phi),1.003*Math.sin(a),1.003*Math.cos(a)*Math.sin(phi)];
-      const b=fieldAt(seed,state.weights),radial=seed.reduce((v,x,j)=&gt;v+x*b[j],0);
+      const b=fieldAt(seed,state.weights,axes()),radial=seed.reduce((v,x,j)=&gt;v+x*b[j],0);
       if(Math.abs(radial)&lt;=1e-7)continue;
       const direction=radial&gt;0?1:-1;
-      const points=trace(seed,state.weights,direction);
+      const points=trace(seed,state.weights,direction,axes());
       if(points.length&lt;6)continue;
       // Include both exterior branches of lines that leave the displayed volume.
       // Closed lines are drawn only once, from their outward surface footpoint.
@@ -2175,7 +2258,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const curve=new THREE.CatmullRomCurve3(points.map(p=&gt;new THREE.Vector3(...p)));
       const geometry=new THREE.TubeGeometry(curve,Math.min(150,points.length),.0045,4,false);
       const line=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:totalColor,transparent:true,opacity:.7}));fieldGroup.add(line);
-      const j=Math.min(points.length-2,Math.max(2,Math.round(points.length*.48))),point=new THREE.Vector3(...points[j]),dir=new THREE.Vector3(...unitField(points[j],state.weights));
+      const j=Math.min(points.length-2,Math.max(2,Math.round(points.length*.48))),point=new THREE.Vector3(...points[j]),dir=new THREE.Vector3(...unitField(points[j],state.weights,axes()));
       const arrow=new THREE.ArrowHelper(dir,point,.09,totalColor,.05,.033);
       arrow.line.material.transparent=true;arrow.line.material.opacity=.8;fieldGroup.add(arrow);
     }
@@ -2184,14 +2267,14 @@ html&gt;body{padding:0}&lt;/style&gt;
   function updateProbe() {
     if(!sceneReady)return;
     disposeGroup(probeGroup);
-    const a=state.latitude*RAD,r=new THREE.Vector3(Math.cos(a),Math.sin(a),0),n=new THREE.Vector3(-Math.sin(a),Math.cos(a),0),p=r.clone().multiplyScalar(1.015);
+    const a=state.latitude*RAD,basis=geographicBasis(state.latitude,state.longitude),r=new THREE.Vector3(...basis.radial),n=new THREE.Vector3(...basis.north),e=new THREE.Vector3(...basis.east),p=r.clone().multiplyScalar(1.015);
     const mark=new THREE.Mesh(new THREE.SphereGeometry(.029,16,12),new THREE.MeshBasicMaterial({color:totalColor,depthTest:false}));mark.position.copy(p);mark.renderOrder=12;probeGroup.add(mark);
     const parallel=Array.from({length:121},(_,j)=&gt;{const ph=j/120*2*Math.PI;return[1.014*Math.cos(a)*Math.cos(ph),1.014*Math.sin(a),1.014*Math.cos(a)*Math.sin(ph)];});
     probeGroup.add(line3(parallel,totalColor,.36,true));
-    const local=localAt(state.latitude,state.weights),ref=localAt(state.latitude,[1,0,0]);
-    for(const [value,col,dash,len] of [[ref,componentColors[0],true,.61],[local,totalColor,false,.68]]) {
+    const localValue=local(),ref=localAt(state.latitude,[1,0,0],AXIAL_AXES,state.longitude);
+    for(const [value,col,dash,len] of [[ref,componentColors[0],true,.61],[localValue,totalColor,false,.68]]) {
       if(value.magnitude&lt;1e-8)continue;
-      const direction=n.clone().multiplyScalar(value.north).addScaledVector(r,-value.down).normalize();
+      const direction=n.clone().multiplyScalar(value.north).addScaledVector(e,value.east).addScaledVector(r,-value.down).normalize();
       const path=line3([p.toArray(),p.clone().addScaledVector(direction,len).toArray()],col,1,dash);path.material.depthTest=false;path.renderOrder=15;probeGroup.add(path);
       if(!dash) {const arrow=new THREE.ArrowHelper(direction,p,len,col,.09,.055);arrow.traverse(o=&gt;{if(o.material)o.material.depthTest=false;o.renderOrder=16;});probeGroup.add(arrow);}
     }
@@ -2210,26 +2293,42 @@ html&gt;body{padding:0}&lt;/style&gt;
     if(!w||!h)return;
     renderer.setSize(w,h,false);camera.aspect=w/h;
     const distance=(w/h&lt;1.15?6.9:6.0)*state.zoom;
-    if(state.view===&#x27;meridian&#x27;) {camera.up.set(0,1,0);camera.position.set(0,0,distance);}
+    if(state.view===&#x27;meridian&#x27;) {camera.up.set(0,1,0);camera.position.set(-Math.sin(state.longitude*RAD)*distance,0,Math.cos(state.longitude*RAD)*distance);}
     else if(state.view===&#x27;equator&#x27;) {camera.up.set(0,0,-1);camera.position.set(0,distance,.0001);}
     else {camera.up.set(0,1,0);camera.position.set(distance*Math.sin(state.azimuth)*Math.cos(state.elevation),distance*Math.sin(state.elevation),distance*Math.cos(state.azimuth)*Math.cos(state.elevation));}
     camera.lookAt(0,0,0);camera.updateProjectionMatrix();camera.updateMatrixWorld();
     surfaceVectorGroup.children.forEach(arrow=&gt;{arrow.visible=arrow.userData.surfaceAnchor.dot(camera.position.clone().normalize())&gt;.12;});
     renderer.render(scene,camera);
-    const a=state.latitude*RAD;
-    projectLabel($(&#x27;gm-north&#x27;),[0,state.display===&#x27;lobes&#x27;?1.93:1.47,0],0,-9);
-    projectLabel($(&#x27;gm-equator&#x27;),[1.55,0,0],0,13);
-    projectLabel($(&#x27;gm-probe-label&#x27;),[1.08*Math.cos(a),1.08*Math.sin(a),0],20,-13);
+    const a=state.latitude*RAD,phi=state.longitude*RAD;
+    projectLabel($(&#x27;gm-north&#x27;),[0,state.display===&#x27;lobes&#x27;?1.93:1.7,0],0,-9);
+    projectLabel($(&#x27;gm-equator&#x27;),[1.55*Math.cos(phi),0,1.55*Math.sin(phi)],0,13);
+    projectLabel($(&#x27;gm-probe-label&#x27;),[1.08*Math.cos(a)*Math.cos(phi),1.08*Math.sin(a),1.08*Math.cos(a)*Math.sin(phi)],20,-13);
+    [&#x27;d&#x27;,&#x27;q&#x27;,&#x27;o&#x27;].forEach((name,j)=&gt;{const el=$(&#x27;gm-&#x27;+name+&#x27;-axis&#x27;);projectLabel(el,axes()[j].map(v=&gt;v*1.43),35*(j-1),-5);el.style.opacity=Math.abs(state.weights[j])&gt;1e-8?&#x27;1&#x27;:&#x27;.5&#x27;;});
     $(&#x27;gm-north&#x27;).hidden=state.view===&#x27;equator&#x27;;
     $(&#x27;gm-probe-label&#x27;).hidden=state.display===&#x27;lobes&#x27;;
     $(&#x27;gm-probe-label&#x27;).textContent=latLabel(state.latitude);
+    // Keep names readable when axes coincide or project onto other scene labels.
+    const placed=[];
+    for(const id of [&#x27;gm-north&#x27;,&#x27;gm-equator&#x27;,&#x27;gm-probe-label&#x27;,&#x27;gm-d-axis&#x27;,&#x27;gm-q-axis&#x27;,&#x27;gm-o-axis&#x27;]) {
+      const el=$(id);if(el.hidden)continue;
+      const ew=el.offsetWidth,eh=el.offsetHeight;
+      let x=Math.max(ew/2+2,Math.min(w-ew/2-2,parseFloat(el.style.left))),y=Math.max(eh/2+2,Math.min(h-eh/2-2,parseFloat(el.style.top)));
+      for(let attempt=0;attempt&lt;12;attempt++) {
+        const overlap=placed.find(b=&gt;Math.abs(x-b.x)&lt;(ew+b.w)/2+3&amp;&amp;Math.abs(y-b.y)&lt;(eh+b.h)/2+3);
+        if(!overlap)break;
+        y=overlap.y+(overlap.h+eh)/2+4;
+        if(y&gt;h-eh/2-2){y=eh/2+2;x=Math.max(ew/2+2,x-ew-5);}
+      }
+      el.style.left=x+&#x27;px&#x27;;el.style.top=y+&#x27;px&#x27;;placed.push({x,y,w:ew,h:eh});
+    }
   }
   function drawVector() {
     const el=$(&#x27;gm-vector&#x27;),w=el.clientWidth,h=el.clientHeight;
     if(!w)return;
     vectorSvg.attr(&#x27;viewBox&#x27;,&#x27;0 0 &#x27;+w+&#x27; &#x27;+h).selectAll(&#x27;*&#x27;).remove();
-    const v=localAt(state.latitude,state.weights),points=[[0,0]];
-    v.components.forEach(b=&gt;{const p=points[points.length-1];points.push([p[0]+b[0],p[1]+b[1]]);});
+    const v=local(),vertical=state.vectorPlane===&#x27;ne&#x27;?2:1,points=[[0,0]];
+    const projectedDown=state.vectorPlane===&#x27;ne&#x27;?v.east:v.down;
+    v.components.forEach(b=&gt;{const p=points[points.length-1];points.push([p[0]+b[0],p[1]+b[vertical]]);});
     const ex=d3.extent(points,d=&gt;d[0]),ey=d3.extent(points,d=&gt;d[1]);
     const pad=.2,rx=Math.max(.6,ex[1]-ex[0]+2*pad),ry=Math.max(.6,ey[1]-ey[0]+2*pad),scale=Math.min((w-76)/rx,(h-50)/ry);
     const cx=(ex[0]+ex[1])/2,cy=(ey[0]+ey[1])/2;
@@ -2241,7 +2340,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     vectorSvg.append(&#x27;line&#x27;).attr(&#x27;x1&#x27;,left).attr(&#x27;x2&#x27;,right).attr(&#x27;y1&#x27;,y(0)).attr(&#x27;y2&#x27;,y(0)).attr(&#x27;stroke&#x27;,&#x27;var(--border)&#x27;);
     vectorSvg.append(&#x27;line&#x27;).attr(&#x27;x1&#x27;,x(0)).attr(&#x27;x2&#x27;,x(0)).attr(&#x27;y1&#x27;,top).attr(&#x27;y2&#x27;,bottom).attr(&#x27;stroke&#x27;,&#x27;var(--border)&#x27;);
     vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,right).attr(&#x27;y&#x27;,Math.max(14,y(0)-8)).attr(&#x27;text-anchor&#x27;,&#x27;end&#x27;).text(&#x27;North →&#x27;);
-    vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,Math.min(w-52,Math.max(18,x(0)+7))).attr(&#x27;y&#x27;,bottom+12).text(&#x27;Down ↓&#x27;);
+    vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,Math.min(w-52,Math.max(18,x(0)+7))).attr(&#x27;y&#x27;,bottom+12).text(state.vectorPlane===&#x27;ne&#x27;?&#x27;East ↓&#x27;:&#x27;Down ↓&#x27;);
     vectorSvg.append(&#x27;circle&#x27;).attr(&#x27;cx&#x27;,x(0)).attr(&#x27;cy&#x27;,y(0)).attr(&#x27;r&#x27;,3).attr(&#x27;fill&#x27;,&#x27;var(--foreground)&#x27;);
     // The three component arrows are added head to tail; the resultant starts at the origin.
     points.slice(0,3).forEach((p,j)=&gt;{
@@ -2250,21 +2349,19 @@ html&gt;body{padding:0}&lt;/style&gt;
       vectorSvg.append(&#x27;line&#x27;).attr(&#x27;x1&#x27;,x(p[0])).attr(&#x27;y1&#x27;,y(p[1])).attr(&#x27;x2&#x27;,x(q[0])).attr(&#x27;y2&#x27;,y(q[1])).attr(&#x27;stroke&#x27;,colors[j]).attr(&#x27;stroke-width&#x27;,2).attr(&#x27;marker-end&#x27;,&#x27;url(#gm-arrow-&#x27;+j+&#x27;)&#x27;);
       if(len&gt;24)vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,(x(p[0])+x(q[0]))/2+(j===0?-12:10)).attr(&#x27;y&#x27;,(y(p[1])+y(q[1]))/2-4).text([&#x27;D&#x27;,&#x27;Q&#x27;,&#x27;O&#x27;][j]);
     });
-    if(v.magnitude&gt;1e-9) {
-      vectorSvg.append(&#x27;line&#x27;).attr(&#x27;x1&#x27;,x(0)).attr(&#x27;y1&#x27;,y(0)).attr(&#x27;x2&#x27;,x(v.north)).attr(&#x27;y2&#x27;,y(v.down)).attr(&#x27;stroke&#x27;,colors[3]).attr(&#x27;stroke-width&#x27;,2.5).attr(&#x27;stroke-dasharray&#x27;,&#x27;5 3&#x27;).attr(&#x27;marker-end&#x27;,&#x27;url(#gm-arrow-3)&#x27;);
-      vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,Math.min(w-18,x(v.north)+9)).attr(&#x27;y&#x27;,Math.max(14,y(v.down)-9)).text(&#x27;Σ&#x27;);
-      const angle=Math.atan2(v.down,v.north),radius=27;
-      const arc=d3.path();arc.arc(x(0),y(0),radius,0,angle,angle&lt;0);
-      vectorSvg.append(&#x27;path&#x27;).attr(&#x27;d&#x27;,arc.toString()).attr(&#x27;fill&#x27;,&#x27;none&#x27;).attr(&#x27;stroke&#x27;,colors[3]).attr(&#x27;stroke-width&#x27;,1);
+    if(Math.hypot(v.north,projectedDown)&gt;DIRECTION_EPS) {
+      vectorSvg.append(&#x27;line&#x27;).attr(&#x27;x1&#x27;,x(0)).attr(&#x27;y1&#x27;,y(0)).attr(&#x27;x2&#x27;,x(v.north)).attr(&#x27;y2&#x27;,y(projectedDown)).attr(&#x27;stroke&#x27;,colors[3]).attr(&#x27;stroke-width&#x27;,2.5).attr(&#x27;stroke-dasharray&#x27;,&#x27;5 3&#x27;).attr(&#x27;marker-end&#x27;,&#x27;url(#gm-arrow-3)&#x27;);
+      vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,Math.min(w-18,x(v.north)+9)).attr(&#x27;y&#x27;,Math.max(14,y(projectedDown)-9)).text(&#x27;Σ&#x27;);
+
     }
-    vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,w-6).attr(&#x27;y&#x27;,14).attr(&#x27;text-anchor&#x27;,&#x27;end&#x27;).text(&#x27;D → Q → O; Σ = total&#x27;);
+    vectorSvg.append(&#x27;text&#x27;).attr(&#x27;x&#x27;,w-6).attr(&#x27;y&#x27;,14).attr(&#x27;text-anchor&#x27;,&#x27;end&#x27;).text(&#x27;D → Q → O; Σ = projected total&#x27;);
   }
   let chartScales;
   function drawChart() {
     const el=$(&#x27;gm-inclination&#x27;),w=el.clientWidth,h=el.clientHeight;
     if(!w)return;
     chartSvg.attr(&#x27;viewBox&#x27;,&#x27;0 0 &#x27;+w+&#x27; &#x27;+h).selectAll(&#x27;*&#x27;).remove();
-    const m={left:64,right:17,top:14,bottom:46},data=d3.range(-90,90.001,1).map(lat=&gt;({lat,...localAt(lat,state.weights)}));
+    const m={left:64,right:17,top:14,bottom:46},data=d3.range(-90,90.001,1).map(lat=&gt;({lat,...local(lat)}));
     const [xmin,xmax]=d3.extent(data,d=&gt;d.lat),[ymin,ymax]=d3.extent(data.flatMap(d=&gt;[d.gad,d.I]).filter(v=&gt;v!==null));
     const x=d3.scaleLinear().domain([xmin,xmax]).range([m.left,w-m.right]),y=d3.scaleLinear().domain([Math.min(-90,ymin),Math.max(90,ymax)]).range([h-m.bottom,m.top]);
     chartScales={x,y,m,w,h};
@@ -2283,7 +2380,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       if(!state.visible[s.id])continue;
       chartSvg.append(&#x27;path&#x27;).datum(data).attr(&#x27;clip-path&#x27;,&#x27;url(#gm-plot-clip)&#x27;).attr(&#x27;data-series-path&#x27;,s.id).attr(&#x27;fill&#x27;,&#x27;none&#x27;).attr(&#x27;stroke&#x27;,s.color).attr(&#x27;stroke-width&#x27;,s.id===&#x27;total&#x27;?2.4:1.7).attr(&#x27;stroke-dasharray&#x27;,s.dash).attr(&#x27;d&#x27;,d3.line().defined(d=&gt;d[s.key]!==null).x(d=&gt;x(d.lat)).y(d=&gt;y(d[s.key])));
     }
-    const probe=localAt(state.latitude,state.weights);
+    const probe=local();
     chartSvg.append(&#x27;line&#x27;).attr(&#x27;data-probe-guide&#x27;,&#x27;&#x27;).attr(&#x27;x1&#x27;,x(state.latitude)).attr(&#x27;x2&#x27;,x(state.latitude)).attr(&#x27;y1&#x27;,m.top).attr(&#x27;y2&#x27;,h-m.bottom).attr(&#x27;stroke&#x27;,&#x27;var(--foreground)&#x27;).attr(&#x27;stroke-opacity&#x27;,.35);
     for(const s of series) if(state.visible[s.id]&amp;&amp;probe[s.key]!==null)chartSvg.append(&#x27;circle&#x27;).attr(&#x27;cx&#x27;,x(state.latitude)).attr(&#x27;cy&#x27;,y(probe[s.key])).attr(&#x27;r&#x27;,4).attr(&#x27;fill&#x27;,s.color);
     const hover=chartSvg.append(&#x27;g&#x27;).attr(&#x27;data-hover-group&#x27;,&#x27;&#x27;).attr(&#x27;display&#x27;,&#x27;none&#x27;).attr(&#x27;pointer-events&#x27;,&#x27;none&#x27;);
@@ -2296,11 +2393,11 @@ html&gt;body{padding:0}&lt;/style&gt;
     [...el.querySelectorAll(&#x27;.tick text,.axis-title&#x27;)].forEach(t=&gt;t.getBBox());
   }
   function showHover(event) {
-    const {x,y,m,w,h}=chartScales,[px]=d3.pointer(event,$(&#x27;gm-inclination&#x27;)),lat=x.invert(Math.max(m.left,Math.min(w-m.right,px))),v=localAt(lat,state.weights),g=chartSvg.select(&#x27;[data-hover-group]&#x27;);
+    const {x,y,m,w,h}=chartScales,[px]=d3.pointer(event,$(&#x27;gm-inclination&#x27;)),lat=x.invert(Math.max(m.left,Math.min(w-m.right,px))),v=local(lat),g=chartSvg.select(&#x27;[data-hover-group]&#x27;);
     g.attr(&#x27;display&#x27;,null);g.select(&#x27;[data-chart-hover-guide]&#x27;).attr(&#x27;x1&#x27;,x(lat)).attr(&#x27;x2&#x27;,x(lat));
     g.selectAll(&#x27;[data-chart-hover-marker]&#x27;).each(function(){const id=this.getAttribute(&#x27;data-chart-hover-marker&#x27;),value=id===&#x27;gad&#x27;?v.gad:v.I;d3.select(this).attr(&#x27;cx&#x27;,x(lat)).attr(&#x27;cy&#x27;,value===null?y(0):y(value)).attr(&#x27;display&#x27;,value===null?&#x27;none&#x27;:null);});
     const tip=$(&#x27;gm-tooltip&#x27;);tip.hidden=false;tip.replaceChildren();
-    const rows=[&#x27;Latitude &#x27;+latLabel(lat)];
+    const rows=[&#x27;Latitude &#x27;+latLabel(lat)+&#x27; · &#x27;+lonLabel(state.longitude)];
     if(state.visible.total)rows.push(&#x27;Combined I: &#x27;+(v.I===null?&#x27;undefined&#x27;:signed(v.I)+&#x27;°&#x27;));
     if(state.visible.gad)rows.push(&#x27;GAD I: &#x27;+signed(v.gad)+&#x27;°&#x27;);
     rows.forEach(text=&gt;{const div=document.createElement(&#x27;div&#x27;);div.textContent=text;tip.appendChild(div);});
@@ -2308,22 +2405,28 @@ html&gt;body{padding:0}&lt;/style&gt;
   }
   function syncUI() {
     [&#x27;d&#x27;,&#x27;q&#x27;,&#x27;o&#x27;].forEach((name,j)=&gt;{$(&#x27;gm-&#x27;+name).value=state.weights[j];$(&#x27;gm-&#x27;+name+&#x27;-value&#x27;).textContent=j===0?fmt(state.weights[j],2):signed(state.weights[j],2);});
+    [&#x27;d&#x27;,&#x27;q&#x27;,&#x27;o&#x27;].forEach((name,j)=&gt;[&#x27;tilt&#x27;,&#x27;azimuth&#x27;].forEach((key,k)=&gt;{$(&#x27;gm-&#x27;+name+&#x27;-&#x27;+key).value=state.orientations[j][k];$(&#x27;gm-&#x27;+name+&#x27;-&#x27;+key+&#x27;-value&#x27;).textContent=fmt(state.orientations[j][k],0)+&#x27;°&#x27;;}));
+    $(&#x27;gm-vector-plane&#x27;).value=state.vectorPlane;
+    $(&#x27;gm-lon&#x27;).value=state.longitude;$(&#x27;gm-lon-value&#x27;).textContent=lonLabel(state.longitude);
+    $(&#x27;gm-slice-title&#x27;).textContent=&#x27;Inclination · longitude &#x27;+lonLabel(state.longitude)+&#x27; slice&#x27;;
     $(&#x27;gm-lat&#x27;).value=state.latitude;$(&#x27;gm-lat-value&#x27;).textContent=latLabel(state.latitude);
     $(&#x27;gm-example&#x27;).value=state.example;$(&#x27;gm-view&#x27;).value=state.view;
     $(&#x27;gm-display&#x27;).value=state.display;$(&#x27;gm-color&#x27;).value=state.coloring;$(&#x27;gm-palette&#x27;).value=state.palette;
     const [d,q,o]=state.weights;
     const active=state.weights.map((v,j)=&gt;Math.abs(v)&gt;1e-8?j:-1).filter(j=&gt;j&gt;=0);
-    $(&#x27;gm-field-name&#x27;).textContent=active.length===1?&#x27;Axial &#x27;+[&#x27;dipole&#x27;,&#x27;quadrupole&#x27;,&#x27;octupole&#x27;][active[0]]+&#x27; · n = &#x27;+(active[0]+1)+&#x27;, m = 0&#x27;:active.length===0?&#x27;Zero field&#x27;:&#x27;Axial field sum&#x27;;
-    $(&#x27;gm-ratios&#x27;).textContent=d&gt;1e-8?&#x27;G₂ = &#x27;+signed(q/d,2)+&#x27; · G₃ = &#x27;+signed(o/d,2):&#x27;G₂, G₃ undefined: dipole = 0&#x27;;
-    const v=localAt(state.latitude,state.weights);
-    $(&#x27;gm-local-title&#x27;).textContent=&#x27;Probe at &#x27;+latLabel(state.latitude)+&#x27; · relative field units&#x27;;
+    $(&#x27;gm-field-name&#x27;).textContent=active.length===1?&#x27;Axisymmetric &#x27;+[&#x27;dipole&#x27;,&#x27;quadrupole&#x27;,&#x27;octupole&#x27;][active[0]]+&#x27; · n = &#x27;+(active[0]+1):active.length===0?&#x27;Zero field&#x27;:&#x27;Rotated component sum&#x27;;
+    $(&#x27;gm-ratios&#x27;).textContent=d&gt;1e-8?&#x27;Local-axis Q/D = &#x27;+signed(q/d,2)+&#x27; · O/D = &#x27;+signed(o/d,2):&#x27;Amplitude ratios undefined: dipole = 0&#x27;;
+    const v=local();
+    $(&#x27;gm-local-title&#x27;).textContent=&#x27;Probe at &#x27;+latLabel(state.latitude)+&#x27;, &#x27;+lonLabel(state.longitude)+&#x27; · units of B₀&#x27;;
     $(&#x27;gm-i&#x27;).textContent=v.I===null?&#x27;Undefined&#x27;:signed(v.I)+&#x27;°&#x27;;
+    $(&#x27;gm-declination&#x27;).textContent=v.declination===null?&#x27;Undefined&#x27;:signed(v.declination)+&#x27;°&#x27;;
+    $(&#x27;gm-ned&#x27;).textContent=[v.north,v.east,v.down].map(b=&gt;signed(b,2)).join(&#x27; / &#x27;);
     $(&#x27;gm-gad-i&#x27;).textContent=signed(v.gad)+&#x27;°&#x27;;
     const delta=v.I===null?null:Math.abs(v.I)-Math.abs(v.gad);
     $(&#x27;gm-delta&#x27;).textContent=delta===null?&#x27;Undefined&#x27;:signed(delta)+&#x27;°&#x27;;
     $(&#x27;gm-inferred&#x27;).textContent=v.inferred===null?&#x27;—&#x27;:latLabel(v.inferred);
-    let detail=v.I===null?&#x27;Zero field at the probe.&#x27;:v.north&lt;=1e-9?&#x27;Northward field ≤ 0; normal GAD inversion unavailable.&#x27;:v.I*v.gad&lt;0?&#x27;Inclination changes sign relative to GAD.&#x27;:Math.abs(delta)&lt;.05?&#x27;Same inclination magnitude as GAD.&#x27;:fmt(Math.abs(delta))+&#x27;° &#x27;+(delta&lt;0?&#x27;shallower&#x27;:&#x27;steeper&#x27;)+&#x27; than GAD at this latitude.&#x27;;
-    $(&#x27;gm-detail&#x27;).textContent=detail;
+    let detail=v.I===null?&#x27;Field is zero or below the direction threshold; inclination and declination are undefined.&#x27;:v.north&lt;=1e-9?&#x27;Normal-polarity GAD proxy unavailable: field is southward or vertical.&#x27;:v.I*v.gad&lt;0?&#x27;Inclination changes sign relative to GAD.&#x27;:Math.abs(delta)&lt;.05?&#x27;Same inclination magnitude as GAD.&#x27;:fmt(Math.abs(delta))+&#x27;° &#x27;+(delta&lt;0?&#x27;shallower&#x27;:&#x27;steeper&#x27;)+&#x27; than GAD at this latitude.&#x27;;
+    $(&#x27;gm-detail&#x27;).textContent=detail+(v.inferred!==null?&#x27; Latitude proxy assumes a normal geographic GAD; tilt and nondipole fields violate that assumption.&#x27;:&#x27;&#x27;);
     root.querySelectorAll(&#x27;[data-series]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(state.visible[b.dataset.series])));
   }
   let pending=false;
@@ -2332,9 +2435,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     if(!pending){pending=true;requestAnimationFrame(()=&gt;{pending=false;rebuildField();});}
   }
   [&#x27;d&#x27;,&#x27;q&#x27;,&#x27;o&#x27;].forEach((name,j)=&gt;$(&#x27;gm-&#x27;+name).addEventListener(&#x27;input&#x27;,e=&gt;{state.weights[j]=Number(e.target.value);state.example=&#x27;custom&#x27;;updateAll();persist();}));
+  [&#x27;d&#x27;,&#x27;q&#x27;,&#x27;o&#x27;].forEach((name,j)=&gt;[&#x27;tilt&#x27;,&#x27;azimuth&#x27;].forEach((key,k)=&gt;$(&#x27;gm-&#x27;+name+&#x27;-&#x27;+key).addEventListener(&#x27;input&#x27;,e=&gt;{state.orientations[j][k]=Number(e.target.value);state.example=&#x27;custom&#x27;;updateAll();persist();})));
+  $(&#x27;gm-reset-axes&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.orientations=initial.orientations.map(a=&gt;a.slice());state.example=&#x27;custom&#x27;;updateAll();persist();});
+  $(&#x27;gm-vector-plane&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.vectorPlane=e.target.value;drawVector();persist();});
+  $(&#x27;gm-lon&#x27;).addEventListener(&#x27;input&#x27;,e=&gt;{state.longitude=Number(e.target.value);updateAll();persist();});
   $(&#x27;gm-lat&#x27;).addEventListener(&#x27;input&#x27;,e=&gt;{state.latitude=Number(e.target.value);syncUI();drawVector();drawChart();updateProbe();persist();});
-  $(&#x27;gm-example&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{const ex=e.target.value;if(examples[ex]){state.weights=examples[ex].slice();state.example=ex;updateAll();persist();}});
-  $(&#x27;gm-view&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.view=e.target.value;rebuildField();renderScene();persist();});
+  $(&#x27;gm-example&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{const ex=e.target.value;if(examples[ex]){state.weights=examples[ex].slice();state.orientations=initial.orientations.map(a=&gt;a.slice());state.example=ex;updateAll();persist();}});
+  $(&#x27;gm-view&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.view=e.target.value;syncUI();rebuildField();renderScene();persist();});
   for(const [id,key] of [[&#x27;gm-display&#x27;,&#x27;display&#x27;],[&#x27;gm-color&#x27;,&#x27;coloring&#x27;],[&#x27;gm-palette&#x27;,&#x27;palette&#x27;]]) {
     $(id).addEventListener(&#x27;change&#x27;,e=&gt;{state[key]=e.target.value;rebuildField();renderScene();persist();});
   }
